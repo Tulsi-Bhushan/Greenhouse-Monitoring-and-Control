@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+                <h2>Control System</h2>
+        </div></header>
+<!-- Peltier Control -->
+<div class="control-system1">
+    <div class="box4">
+        <div class="box4-content">
+        <p>Peltier Control</p>
+        <div class="box4-image1" style="background-image: url('peltier_control.png');"></div>
+            <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/PeltierHot')">Peltier Hot</button>
+            <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/PeltierCold')">Peltier Cold</button>
+            <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/PeltierOff')">Peltier Off</button>
+        </div>
+    </div>
+    <!----------------------- Enclosure fans ----------------------------->
+    <div class="box4">
+        <div class="box4-content">
+        <p>Enclosure fans control</p>
+        <div class="box4-image2" style="background-image: url('fan_control.png');"></div>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/EnclosureFanOn')">Enclosure fans On</button>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/EnclosureFanOff')">Enclosure fans Off</button>
+    </div></div>
+    <!-- Dehumidifier -->
+    <div class="box5">
+        <div class="box4-content">
+        <p>Dehumidifier</p>
+        <div class="box4-image2" style="background-image: url('demist.png');"></div>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/DehumidifierOn')">Dehumidifier On</button>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/DehumidifierOff')">Dehumidifier Off</button>
+    </div></div>
+
+    <!------------------------------- Mist Maker --------------------------------->
+    <div class="box5">
+        <div class="box4-content">
+        <p>Mist Maker</p>
+        <div class="box4-image2" style="background-image: url('mist-control.png');"></div>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/MistmakerOn')">Mistmaker On</button>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/MistmakerOff')">Mistmaker Off</button>
+    </div></div>
+
+    <!----------------------- roof section ----------------------------->
+    <div class="box5">
+        <div class="box4-content">
+        <p>Roof Setting</p>
+        <div class="box4-image2" style="background-image: url('roof.png');"></div>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/RoofOpen')">Roof Open</button>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/RoofClose')">Roof Close</button>
+    </div></div>
+
+    <!----------------------- Water Pump ----------------------------->
+    <div class="box5">
+        <div class="box4-content">
+        <p>Water Pump</p>
+        <div class="box4-image2" style="background-image: url('water-pump-control.png');"></div>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/WaterPumpOn')">Water Pump On</button>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/WaterPumpOff')">Water Pump Off</button>
+    </div></div>
+
+     <!----------------------- Light ----------------------------->
+     <div class="box5">
+        <div class="box4-content">
+        <p>Lights</p>
+        <div class="box4-image2" style="background-image: url('light.png');"></div>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/LightsOn')">Lights On</button>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/LightsOff')">Lights Off</button>
+    </div></div>
+
+    <!----------------------- Modes----------------------------->
+    <div class="box5">
+        <div class="box4-content">
+        <p>Modes</p>
+        <div class="box4-image2" style="background-image: url('mode.png');"></div>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/Mode0')">Mode 0</button>
+        <button class="control-button" onclick="sendGetRequest('http://192.168.4.2/Mode1')">Mode 1</button>
+    </div></div>
+
+
+    <script>
+        // Function to send GET requests
+        function sendGetRequest(url) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Request was successful, handle the response here
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
+    </script>
+</body>
+</html>
+

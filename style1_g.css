@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+   margin: 0;
+    box-sizing: border-box;
+   
+}
+
+html,body{
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    height: 90px;
+    background-color:#243140;
+    color: #C2DEDC;
+    font-weight: 500;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+
+.control-button{
+    background-color:#ADC4CE;
+   padding: 10px;
+    color:black;
+    font-size: medium;
+}
+.box5 {
+    height: 270px;
+    /**border:2px solid black;**/
+    width: 45%;
+    margin-top: 30px;
+    background-color:#63809f;
+    padding: 10px 0px 15px;
+}
+
+  .control-system{
+    font-size: large;
+    background-color: #273442;
+}
+
+.heading-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  #273442;
+    position: relative;
+    top: 10px;
+    border-bottom: 2px solid transparent;
+        transition: 0.2s ease-in;
+}
+
+.heading-controls h3{border-bottom: 2px solid transparent;
+    transition: 0.2s ease-in;
+}
+
+.heading-controls h3:hover{
+    border-bottom: 2px solid black;
+}
+
+/*Control 1 with two boxes*/
+.control-system1{
+    position: relative;
+    padding-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color:#cadef0;
+}
+.box4 {
+    height: 270px;
+    /**border:2px solid black;**/
+    width: 45%;
+   margin-top: 30px;
+    background-color: #63809f;
+    padding: 10px 0px 15px;
+}
+.box4-content{
+   margin-left: 10px;
+    font-weight: 600;
+}
+
+.box4-content p{
+    color: #cad8e2;
+    font-size:larger;
+    font-weight:600;
+}
+
+.box4-image1{
+    height: 160px;
+    background-size: 150px;
+   background-repeat: no-repeat;
+    position: relative;
+    left: 190px;
+    top: 10px;
+}
+
+.box4-image2{
+    height: 160px;
+    background-size: 160px;
+   background-repeat: no-repeat;
+    position: relative;
+    left: 180px;
+    top: 2px;
+}
+
+.box4-content form{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
